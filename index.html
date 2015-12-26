@@ -11,17 +11,23 @@
 </head>
 <body>
 	<div class="container">
-		<nav class="navbar navbar-default">
+		<nav id="mynav" class="navbar navbar-default hidden">
 			<div class="navbar-brand pull-left">
 				Float 
 			</div>
 		</nav>
-
-		<nav class="navbar navbar-default">
-			<div class="navbar-brand pull-right">
-				Float 
-			</div>
-		</nav>
 	</div>
+	<a id="btnShow" href="#" class="btn btn-default"> Show me </a>
+	<a id="btnHide" href="#" class="btn btn-default"> Hide me </a>
+
+	<script>
+		$('#btnShow').click(function() {
+			$('#mynav').removeClass('hidden');
+		});
+
+		$('#btnHide').click(function() {
+			$('#mynav').addClass('hidden');
+		});
+	</script>
 </body>
 </html>
